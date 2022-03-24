@@ -1,8 +1,8 @@
 
 {}
-  :configs $ {} (:reload-fn |app.main/reload!) (:port 6001) (:output |src) (:compact-output? true) (:storage-key |calcit.cirru) (:version |0.0.4)
-    :modules $ [] |touch-control/ |pointed-prompt/ |quatrefoil.calcit/
-    :init-fn |app.main/main!
+  :users $ {}
+    |root $ {} (:avatar nil) (:name |root) (:nickname |root) (:id |root) (:password |)
+    |-pxyJ-2j $ {} (:avatar nil) (:name |chen) (:nickname |chen) (:id |-pxyJ-2j) (:theme :star-trail) (:password |d41d8cd98f00b204e9800998ecf8427e)
   :ir $ {} (:package |app)
     :files $ {}
       |app.comp.hopf $ {}
@@ -2392,7 +2392,7 @@
                 |T $ {} (:text |:require) (:type :leaf) (:at 1583600289679) (:by |root) (:id |S6oFFJOth2U)
                 |h $ {}
                   :data $ {}
-                    |j $ {} (:text "|\"@quamolit/quatrefoil-utils") (:type :leaf) (:at 1634439925107) (:by |-pxyJ-2j) (:id |-UoE_xHpD)
+                    |j $ {} (:text "|\"@quatrefoil/utils") (:type :leaf) (:at 1648146628934) (:by |-pxyJ-2j) (:id |-UoE_xHpD)
                     |r $ {} (:text |:refer) (:type :leaf) (:at 1620036433001) (:by |-pxyJ-2j) (:id |oCsaxE6m)
                     |v $ {}
                       :data $ {}
@@ -2447,6 +2447,7 @@
           :at 1583600289679
           :by nil
           :id |t5qdMpEc3Tn
-  :users $ {}
-    |root $ {} (:avatar nil) (:name |root) (:nickname |root) (:id |root) (:password |)
-    |-pxyJ-2j $ {} (:avatar nil) (:name |chen) (:nickname |chen) (:id |-pxyJ-2j) (:theme :star-trail) (:password |d41d8cd98f00b204e9800998ecf8427e)
+  :configs $ {} (:reload-fn |app.main/reload!) (:port 6001) (:output |src) (:compact-output? true) (:storage-key |calcit.cirru) (:version |0.0.4)
+    :modules $ [] |touch-control/ |pointed-prompt/ |quatrefoil/
+    :init-fn |app.main/main!
+  :entries $ {}

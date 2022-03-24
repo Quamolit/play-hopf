@@ -1,8 +1,9 @@
 
 {} (:package |app)
   :configs $ {} (:init-fn |app.main/main!) (:reload-fn |app.main/reload!)
-    :modules $ [] |touch-control/ |pointed-prompt/ |quatrefoil.calcit/
+    :modules $ [] |touch-control/ |pointed-prompt/ |quatrefoil/
     :version |0.0.4
+  :entries $ {}
   :files $ {}
     |app.comp.hopf $ {}
       :ns $ quote
@@ -198,7 +199,7 @@
     |app.main $ {}
       :ns $ quote
         ns app.main $ :require
-          "\"@quamolit/quatrefoil-utils" :refer $ inject-tree-methods
+          "\"@quatrefoil/utils" :refer $ inject-tree-methods
           quatrefoil.core :refer $ render-canvas! *global-tree clear-cache! init-renderer! handle-key-event handle-control-events
           app.comp.container :refer $ comp-container
           app.updater :refer $ [] updater
