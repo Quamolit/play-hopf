@@ -1,8 +1,8 @@
 {}
   :dependencies $ {}
     |Quamolit/touch-control |main
-    |Quatrefoil-GL/quatrefoil |0.1.0-a4
-    |calcit-lang/quaternion |0.0.8
+    |Quatrefoil-GL/quatrefoil |main
+    |calcit-lang/quaternion |main
     |mvc-works/pointed-prompt |main
     |Respo/respo.calcit |main
     |Respo/respo-ui.calcit |main

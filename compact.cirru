@@ -147,8 +147,8 @@
                               y $ + (last center)
                                 * r1 $ sin (* idx th-step)
                               th $ get-angle x y
-                              len $ c-length ([] x y)
-                              r $ c-length ([] len 2)
+                              len $ c-length (complex x y)
+                              r $ c-length (complex len 2)
                               vertical-angle $ get-angle 2 len
                               left-edge $ - len r
                               rail-r len
@@ -229,7 +229,9 @@
           ns app.comp.hopf $ :require
             quatrefoil.alias :refer $ group box sphere text line tube point-light
             quatrefoil.core :refer $ defcomp
-            quaternion.core :refer $ q* &q* v-scale &v+ q+ invert &c* &c+ &c- c-length
+            quaternion.core :refer $ q* &q* q+ invert
+            quaternion.vector :refer $ v-scale &v+ v3
+            quaternion.complex :refer $ &c* &c+ &c- c-length complex
             quatrefoil.app.materials :refer $ cover-line
             quatrefoil.comp.control :refer $ comp-value comp-value-2d comp-switch
     |app.main $ %{} :FileEntry
@@ -254,7 +256,7 @@
           :code $ quote
             defn main! () (load-console-formatter!) (inject-tree-methods)
               set-perspective-camera! $ {} (:fov 40) (:near 0.1) (:far 100)
-                :position $ [] 0 0 8
+                :position $ [] 0 1 1
                 :aspect $ / js/window.innerWidth js/window.innerHeight
               let
                   canvas-el $ js/document.querySelector |canvas
